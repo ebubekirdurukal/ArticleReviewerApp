@@ -2,12 +2,12 @@ package com.article.reviewer.application.mapper;
 
 import com.article.reviewer.application.dto.ArticleDto;
 import com.article.reviewer.application.model.Article;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Component
 public class ArticleMapper {
 
     public ArticleDto article2Dto(Article article) {

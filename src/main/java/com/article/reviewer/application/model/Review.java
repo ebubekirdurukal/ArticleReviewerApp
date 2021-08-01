@@ -4,6 +4,7 @@ package com.article.reviewer.application.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Data
@@ -23,8 +24,8 @@ public class Review {
     private String reviewContent;
 
     @JsonIgnore
-    @JoinColumn(name="article_id")
-    @ManyToOne(fetch = FetchType.LAZY,optional = false)
+    @JoinColumn(name = "article_id")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private Article article;
 
 

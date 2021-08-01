@@ -10,8 +10,6 @@ public interface ReviewService {
 
     ReviewDto updateReviewById(Long id, ReviewDto reviewDto);
 
-    List<ReviewDto> getAllReviews();
-
     List<ReviewDto> getReviewsByParams(String reviewer,  Long articleId);
 
     ReviewDto getReviewById(Long id);

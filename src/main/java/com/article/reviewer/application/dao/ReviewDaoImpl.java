@@ -7,11 +7,15 @@ import com.article.reviewer.application.model.QReview;
 import com.article.reviewer.application.model.Review;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@Repository
+@Transactional
 public class ReviewDaoImpl implements ReviewDao {
 
     @Autowired

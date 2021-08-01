@@ -13,6 +13,6 @@ public class ReviewDto {
 
     private String reviewer;
     private String reviewContent;
-    private Article article;
+    private Long articleId;
 
 }
