@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mysql8:
+    image: mysql:8.0
+    container_name: mysql8.0
+    ports:
+      - "3320:3306"
+    networks:
+      - article-reviewer-network
+    environment:
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_DATABASE=articleReviewer
+      - MYSQL_ROOT_PASSWORD=.Admin2020
+  article-reviewer:
+    image: ebubekirdurukal/article-reviewer:latest
+    container_name: article-reviewer
+    ports:
+      - "8080:8080"
+    networks:
+      - article-reviewer-network
+    depends_on:
+      - mysql8
+networks:
+  article-reviewer-network:
+    external: true
+
